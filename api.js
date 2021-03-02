@@ -67,6 +67,10 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.use(cors())
+app.get('/',(req,res)=>{
+
+    res.send('health check is perfect')
+})
 
 app.post('/users',(req,res) => {
     console.log("<<<<",req.body)
